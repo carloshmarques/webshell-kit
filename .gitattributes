@@ -1,0 +1,23 @@
+# Forçar normalização de quebras de linha para estilo Linux (LF)
+* text=auto eol=lf
+
+# Trancar ficheiros de código e marcação como texto puro com LF obrigatório
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.html text eol=lf
+*.pug text eol=lf
+*.scss text eol=lf
+*.css text eol=lf
+
+# Trancar ficheiros de ambiente e automação
+gulpfile.js text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# Trancar imagens e vetores como binários puros para evitar corrupção em merges
+*.svg binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary

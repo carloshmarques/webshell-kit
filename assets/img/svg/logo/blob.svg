@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <!-- Gradiente de Jactância para o Núcleo Vivo -->
+    <radialGradient id="heartPulse" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff007f" stop-opacity="1"/>
+      <stop offset="70%" stop-color="#a020f0" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#07080c" stop-opacity="0"/>
+    </radialGradient>
+    
+    <!-- Filtro de Brilho Dinâmico do Penúltimo Formato -->
+    <filter id="glowEffect" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#00f2fe" flood-opacity="0.5"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#ff007f" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseAndMorph {
+      0% {
+        transform: scale(0.9) rotate(0deg);
+        d: path('M200,80 C260,80 320,120 310,200 C300,280 250,320 200,320 C150,320 90,270 90,200 C90,130 140,80 200,80 Z');
+      }
+      35% {
+        transform: scale(1.05) rotate(5deg);
+        d: path('M200,70 C270,90 330,140 320,210 C310,280 240,330 200,330 C160,330 80,290 80,210 C80,130 130,50 200,70 Z');
+      }
+      70% {
+        transform: scale(0.95) rotate(-3deg);
+        d: path('M200,85 C250,75 310,110 300,190 C290,270 260,310 200,310 C140,310 100,250 100,190 C100,130 150,95 200,85 Z');
+      }
+      100% {
+        transform: scale(0.9) rotate(0deg);
+        d: path('M200,80 C260,80 320,120 310,200 C300,280 250,320 200,320 C150,320 90,270 90,200 C90,130 140,80 200,80 Z');
+      }
+    }
+    .pulsing-blob {
+      transform-origin: center;
+      animation: pulseAndMorph 3s ease-in-out infinite;
+    }
+  </style>
+
+  <!-- Grupo de Efeitos Ativados -->
+  <g filter="url(#glowEffect)">
+    <!-- O Coração Mutável -->
+    <path class="pulsing-blob" d="M200,80 C260,80 320,120 310,200 C300,280 250,320 200,320 C150,320 90,270 90,200 C90,130 140,80 200,80 Z" fill="url(#heartPulse)"/>
+    <!-- Núcleo Central de Sincronização -->
+    <circle cx="200" cy="200" r="8" fill="#00f2fe"/>
+  </g>
+</svg>

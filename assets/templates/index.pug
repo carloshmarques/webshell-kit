@@ -1,0 +1,67 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title #{pageTitle ? pageTitle : (title ? title : 'Webshell-Kit')}
+    meta(name="description" content=description)
+    meta(name="author" content=name)
+    link(rel="stylesheet" href="../css/main.css")
+  
+  body
+    header.main-header
+      //- O Botão Burger flutua fixo no canto superior direito
+      div.menu-btn
+        span.menu-btn_burger
+      
+      //- A Nav do Menu de Módulos (Estilo painel que abre/fecha)
+      nav.menu_nav
+        ul.menu-nav-list
+          li.menu-nav_item.active
+            a.menu-nav_link(href="index.html") Home
+          li.menu-nav_item
+            a.menu-nav_link(href="#") About 
+          li.menu-nav_item
+            a.menu-nav_link(href="#") Projectos 
+          li.menu-nav_item
+            a.menu-nav_link(href="#") Contact Us
+
+    main.desktop-workspace
+      section.home
+        h1.home__name webshell
+          span.home__name--last -kit
+        h2 Web devlopment, Design & programing.
+
+    //- O teu Logger e Analisador de Sistema entra aqui flutuante
+    include sections/system_analyzer.pug
+
+    block content
+
+    //- TASKBAR INFERIOR ESTILO OS (Nas coordenadas certas)
+    footer.desktop-taskbar
+      div.taskbar-start-zone
+        div.social-icons
+          a(href="#")
+            i.fab.fa-facebook
+          a(href="#")
+            i.fab.fa-twitter
+          a(href="#")
+            i.fab.fa-youtube
+          a(href="#")
+            i.fab.fa-linkedin
+          a(href="#")
+            i.fab.fa-github#hydra-start-trigger
+            
+      //- Zona intermédia livre para os teus botões de janelas abertas
+      div.taskbar-apps-zone#taskbar-apps
+
+      div.taskbar-system-tray
+        p &copy; #{new Date().getFullYear()} Webshell-Kit
+
+    //- Scripts e FontAwesome
+    script(src="https://kit.fontawesome.com/6f7d0688fd.js" crossorigin="anonymous")
+        //- Scripts e FontAwesome
+    script(src="https://fontawesome.com" crossorigin="anonymous")
+    script(src="js/main.js")
+    script(src="js/modernizr.js")
+

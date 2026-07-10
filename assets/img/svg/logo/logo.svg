@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <!-- Gradiente Aero Glass Translúcido -->
+    <linearGradient id="aeroGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#4facfe" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#07080c" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- Brilho Jactante Neon -->
+    <linearGradient id="jactanciaNeon" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff007f" />
+      <stop offset="100%" stop-color="#a020f0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo Sólido Dark Terminal -->
+  <rect width="100%" height="100%" fill="#07080c"/>
+
+  <!-- Grupo Principal da Hydra -->
+  <g>
+    <!-- O NÚCLEO CENTRAL (A Raiz Invisível) -->
+    <path d="M400,680 C320,680 260,610 260,510 C260,430 330,390 400,360 C470,390 540,430 540,510 C540,610 480,680 400,680 Z" fill="url(#aeroGlass)" stroke="#00f2fe" stroke-width="3" stroke-dasharray="6,4"/>
+
+    <!-- CABEÇA DA ESQUERDA (Módulo SCSS) -->
+    <path d="M330,400 C240,360 170,270 190,160" fill="none" stroke="url(#aeroGlass)" stroke-width="14" stroke-linecap="round"/>
+    <polygon points="190,135 175,175 205,175" fill="url(#jactanciaNeon)" />
+    <circle cx="190" cy="160" r="4" fill="#ffffff"/>
+
+    <!-- CABEÇA CENTRAL (C# Core / IA Kelex) -->
+    <path d="M400,360 C400,270 375,190 400,90" fill="none" stroke="url(#aeroGlass)" stroke-width="18" stroke-linecap="round"/>
+    <polygon points="400,60 380,105 420,105" fill="url(#jactanciaNeon)" />
+    <circle cx="400" cy="95" r="5" fill="#ffffff"/>
+
+    <!-- CABEÇA DA DIREITA (Interface WebView) -->
+    <path d="M470,400 C560,360 630,270 610,160" fill="none" stroke="url(#aeroGlass)" stroke-width="14" stroke-linecap="round"/>
+    <polygon points="610,135 595,175 625,175" fill="url(#jactanciaNeon)" />
+    <circle cx="610" cy="160" r="4" fill="#ffffff"/>
+    
+    <!-- Linhas de Circuito de Injeção de Código -->
+    <path d="M400,360 L400,510 M400,510 L330,590 M400,510 L470,590" fill="none" stroke="#00f2fe" stroke-width="3" opacity="0.6"/>
+    <circle cx="400" cy="510" r="8" fill="#ff007f"/>
+    <circle cx="330" cy="590" r="6" fill="#00f2fe"/>
+    <circle cx="470" cy="590" r="6" fill="#00f2fe"/>
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+{
+  "name": "webshell-kit",
+  "version": "0.1.1",
+  "description": "Core engine and universal webshell presentation layer",
+  "main": "gulpfile.cjs",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carloshmarques/webshell-kit.git"
+  },
+  "keywords": [
+    "webshell",
+    "dynamics",
+    "starter-kit",
+    "sass"
+  ],
+  "author": "Carlos H. Marques",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.29.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-cache": "^1.1.3",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-modernizr": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.60.0"
+  }
+}
